@@ -9,7 +9,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_min"
+        app:layout_constraintVertical_bias="0.1"
+        android:layout_width="400dp"
         android:layout_height="75dp"
         android:text="@string/title"
         android:textSize="50sp"
@@ -17,10 +19,11 @@
         android:fontFamily="sans-serif-black"
         android:textColor="@color/black"
         />
-    <Button
+
+    <android.widget.Button
         android:id="@+id/btn_min"
         app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintBottom_toTopOf="@+id/btn_max"
+        app:layout_constraintBottom_toTopOf="@+id/subtitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/btn_linked_border"
@@ -29,32 +32,50 @@
         android:layout_height="75dp"
         android:text="@string/minimum"
         android:textSize="45sp"
+        app:layout_constraintVertical_bias="0.1"
         />
 
-    <EditText
-        android:id="@+id/btn_max"
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:text="@string/title_min"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/etxt_min"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_min"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/etxt_min"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle"
         app:layout_constraintBottom_toTopOf="@id/btn_add"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/btn_linked_border"
+        app:layout_constraintVertical_bias="0.5"
+        android:background="@drawable/etxt_input_border"
         android:layout_width="300dp"
         android:layout_height="75dp"
-        android:hint="hola"
-        android:textSize="45sp"
+        android:hint="@string/etxt_min"
+        android:gravity="center"
+        android:textSize="30sp"
         />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btn_add"
-        app:layout_constraintTop_toBottomOf="@+id/btn_max"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_min"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/black"
+        android:background="@drawable/btn_start_border"
         android:layout_width="200dp"
         android:layout_height="75dp"
-        android:text="@string/add"
-        android:textSize="45sp"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        android:textSize="30sp"
         />
 
 
