@@ -33,6 +33,11 @@
             android:label="MinActivity"
             android:theme="@style/Base.Theme.Aleatometro">
         </activity>
+        <activity android:name=".MaxActivity"
+            android:exported="true"
+            android:label="MaxActivity"
+            android:theme="@style/Base.Theme.Aleatometro">
+        </activity>
     </application>
 
 </manifest>

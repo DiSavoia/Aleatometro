@@ -48,7 +48,8 @@
     <string name="minimum">Mínimo</string>
     <string name="maximum">Máximo</string>
     <string name="add">Agregar</string>
-    <string name="confirm">Confirmar</string>
+    <string name="go_Back">Volver</string>
     <string name="title_min">Ingresa la cantidad mínima de minutos</string>
-    <string name="etxt_min">Ingresar minutos</string>
+    <string name="title_max">Ingresa la cantidad máxima de minutos</string>
+    <string name="etxt_minutes">Ingresar minutos</string>
 </resources>

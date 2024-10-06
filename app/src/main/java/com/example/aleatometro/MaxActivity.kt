@@ -4,30 +4,31 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class MinActivity : AppCompatActivity() {
+class MaxActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_min)
+        setContentView(R.layout.activity_max)
         title = "Aleatometro"
         val backButton = findViewById<Button>(R.id.btn_goBack)
-        val minInput = findViewById<EditText>(R.id.etxt_min)
+        val maxInput = findViewById<EditText>(R.id.etxt_max)
 
-        val maxMinutes = intent.extras?.getString("maxMinutes").toString()
+        val minMinutes = intent.extras?.getString("minMinutes").toString()
 
-        var minMinutes = intent.extras?.getString("minMinutes").toString()
-        if (minMinutes != "null"){
-            minInput.setText(minMinutes)
+        var maxMinutes = intent.extras?.getString("maxMinutes").toString()
+        if (maxMinutes != "null"){
+            maxInput.setText(maxMinutes)
         }
 
         backButton.setOnClickListener{
-            val intent = Intent(this@MinActivity, MenuActivity::class.java)
+            val intent = Intent(this@MaxActivity, MenuActivity::class.java)
 
-            minMinutes = minInput.text.toString()
+            maxMinutes = maxInput.text.toString()
             val bundle = Bundle()
-            bundle.putString("minMinutes", minMinutes)
             bundle.putString("maxMinutes", maxMinutes)
+            bundle.putString("minMinutes", minMinutes)
             intent.putExtras(bundle)
 
             startActivity(intent)
